@@ -110,6 +110,7 @@ public class NativeGeocoder extends CordovaPlugin {
                     placemark.put("thoroughfare", address.getThoroughfare() != null ? address.getThoroughfare() : "");
                     placemark.put("subThoroughfare", address.getSubThoroughfare() != null ? address.getSubThoroughfare() : "");
                     placemark.put("areasOfInterest", address.getFeatureName() != null ? new JSONArray(new String[]{ address.getFeatureName()} ) : new JSONArray());
+                    placemark.put("addressLine", address.getAddressLine(0) != null ? address.getAddressLine(0) : "");
 
                     resultObj.put(placemark);
                 }
@@ -182,6 +183,7 @@ public class NativeGeocoder extends CordovaPlugin {
                             placemark.put("thoroughfare", address.getThoroughfare() != null ? address.getThoroughfare() : "");
                             placemark.put("subThoroughfare", address.getSubThoroughfare() != null ? address.getSubThoroughfare() : "");
                             placemark.put("areasOfInterest", address.getFeatureName() != null ? new JSONArray(new String[]{ address.getFeatureName() }) : new JSONArray());
+                            placemark.put("addressLine", address.getAddressLine(0) != null ? address.getAddressLine(0) : "");
 
                             resultObj.put(placemark);
                         }
